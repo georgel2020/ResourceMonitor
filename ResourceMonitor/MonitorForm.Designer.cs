@@ -63,6 +63,8 @@
             this.Controls.Add(this.MemoryLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MonitorForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MonitorForm";
             this.TopMost = true;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MonitorForm_MouseDown);

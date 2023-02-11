@@ -26,7 +26,6 @@ namespace ResourceMonitor
             formPath = GetRoundedRectPath(rect, 16);
             Region = new Region(formPath);
 
-            StartPosition = FormStartPosition.Manual;
             Location = new Point(Screen.PrimaryScreen.Bounds.Width - Width - 10, 10);
 
             if (clickThrough)
@@ -39,6 +38,8 @@ namespace ResourceMonitor
             {
                 TopMost = false;
             }
+            
+            
         }
 
         private void MonitorForm_MouseDown(object sender, MouseEventArgs e)
