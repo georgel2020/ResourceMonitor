@@ -44,7 +44,7 @@ namespace ResourceMonitor
         private void MonitorForm_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x0112, 0xF012, 0);
+            SendMessage(Handle, 0x0112, 0xF012, 0);
         }
 
         private void ReadConfig()
@@ -99,9 +99,6 @@ namespace ResourceMonitor
 
         [DllImport("user32", EntryPoint = "SetWindowLong")]
         private static extern uint SetWindowLong(IntPtr hwnd, int nIndex, uint dwNewLong);
-
-        [DllImport("user32", EntryPoint = "GetWindowLong")]
-        private static extern uint GetWindowLong(IntPtr hwnd, int nIndex);
 
         [DllImport("user32", EntryPoint = "SetLayeredWindowAttributes")]
         private static extern int SetLayeredWindowAttributes(IntPtr hwnd, int crKey, int bAlpha, int dwFlags);
